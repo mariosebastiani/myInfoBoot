@@ -1,7 +1,7 @@
 # myInfoBoot
 
-A simple script to be alerted about /boot free space 
+A simple script to be alerted about /boot free space.
 
-It works for me on Ubuntu 14.04 and Gnome3 environment.
+Put it in /etc/profile.d directory to be notified at logon time.
 
-Needs libnotify-bin.
+It works for me on Ubuntu 14.04 and Gnome3 environment. Needs libnotify-bin.
