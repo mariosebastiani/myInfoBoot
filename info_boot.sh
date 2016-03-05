@@ -1,7 +1,11 @@
 #!/bin/sh
 
+total_boot=0  
+free_boot=0
+perc_boot=0
+
 counter=$(ls -1 /boot/initrd.img* |wc -l)
-boot_partition=$(df -h |grep -c /boot)
+boot_partition=$(df -h |grep -cw "/boot$")
 if [ "$boot_partition" -gt "0" ]; then
     total_boot=$(df -h |grep -w "/boot$"|awk '{print $2}')
     free_boot=$(df -h |grep -w "/boot$"|awk '{print $4}')
